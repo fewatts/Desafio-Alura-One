@@ -29,15 +29,9 @@ const descriptografar = (criptografada) => {
 };
 
 const validarEntrada = (entrada) => {
-   let caracteresEspeciais = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
-   let letrasMaiusculas = /[A-Z]/;
-   let apenasMinusculas = /^[a-z]+$/;
+   let apenasMinusculasSemEspacos = /^[a-z\s]+$/;
 
-   if (
-      caracteresEspeciais.test(entrada) ||
-      letrasMaiusculas.test(entrada) ||
-      !apenasMinusculas.test(entrada)
-   ) {
+   if (!apenasMinusculasSemEspacos.test(entrada)) {
       return false;
    } else {
       return true;
@@ -47,21 +41,31 @@ const validarEntrada = (entrada) => {
 const processamentoCriptografar = () => {
    let inputUsuario = document.getElementById("input").value;
    if (validarEntrada(inputUsuario)) {
-      console.log(criptografar(inputUsuario));
+      mostrarResultados("h2", "");
+      mostrarResultados("p", criptografar(inputUsuario));
    } else {
-      console.log("hmmm tem coisa errada ai");
+      mostrarResultados("h2", "");
+      mostrarResultados(
+         "p",
+         "Não pode ter letras maiúsculas ou caracteres especiais..."
+      );
    }
 };
 
 const processamentoDescriptografar = () => {
    let inputUsuario = document.getElementById("input").value;
    if (validarEntrada(inputUsuario)) {
-      console.log(descriptografar(inputUsuario));
+      mostrarResultados("h2", "");
+      mostrarResultados("p", descriptografar(inputUsuario));
    } else {
-      console.log("hmmm tem coisa errada ai");
+      mostrarResultados("h2", "");
+      mostrarResultados(
+         "p",
+         "Não pode ter letras maiúsculas ou caracteres especiais..."
+      );
    }
 };
 
-const mostrarResultados = () => {
-
-}
+const mostrarResultados = (id, mensagem) => {
+   document.getElementById(id).textContent = mensagem;
+};

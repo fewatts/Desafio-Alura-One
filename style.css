@@ -129,6 +129,7 @@ a {
     }
 
     .sessao-mensagem {
+        height: fit-content;
         margin-top: 50px;
         margin-bottom: 20px;
         margin-left: 45px;
@@ -150,6 +151,7 @@ a {
     }
 
     .paragrafo-mensagem{
+        width: -webkit-fill-available;
         text-align: center;
         font-weight: 100;
         color: rgb(107, 99, 99);
