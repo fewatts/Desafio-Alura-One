@@ -29,9 +29,9 @@ const descriptografar = (criptografada) => {
 };
 
 const validarEntrada = (entrada) => {
-   var caracteresEspeciais = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
-   var letrasMaiusculas = /[A-Z]/;
-   var apenasMinusculas = /^[a-z]+$/;
+   let caracteresEspeciais = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+   let letrasMaiusculas = /[A-Z]/;
+   let apenasMinusculas = /^[a-z]+$/;
 
    if (
       caracteresEspeciais.test(entrada) ||
@@ -61,3 +61,7 @@ const processamentoDescriptografar = () => {
       console.log("hmmm tem coisa errada ai");
    }
 };
+
+const mostrarResultados = () => {
+
+}
