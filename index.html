@@ -16,7 +16,7 @@
     </header>
     <main>
         <section class="caixa-entrada">
-            <input type="text" placeholder="Digite seu texto" class="entrada-usuario">
+            <input type="text" placeholder="Digite seu texto" class="entrada-usuario" id="input">
         </section>
         <section class="sessao-aviso">
             <picture class="caixa-aviso">
@@ -24,8 +24,8 @@
             </picture>
         </section>
         <section class="sessao-botoes">
-            <button class="criptografar">Criptografar</button>
-            <button class="descriptografar">Descriptografar</button>
+            <button class="criptografar" onclick="processamentoCriptografar()">Criptografar</button>
+            <button class="descriptografar" onclick="processamentoDescriptografar()">Descriptografar</button>
         </section>
         <section class="sessao-mensagem">
             <picture>
