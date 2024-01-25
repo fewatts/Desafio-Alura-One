@@ -76,3 +76,19 @@ const ativarBotao = () => {
    let botaoEscondido = document.getElementById("copia");
    botaoEscondido.style.display = "block";
 };
+
+const sleep = (milliseconds) => {
+   return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
+
+const copiandoTexto = async () => {
+   let texto = document.getElementById("p").textContent;
+   try {
+      await navigator.clipboard.writeText(texto);
+   } catch (err) {
+      mostrarResultados("copia", "Erro!");
+   }
+   mostrarResultados("copia", "Copiado!");
+   await sleep(3000);
+   mostrarResultados("copia", "Copiar");
+};

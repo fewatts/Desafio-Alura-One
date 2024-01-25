@@ -155,10 +155,18 @@ a {
         text-align: center;
         font-weight: 100;
         color: rgb(107, 99, 99);
+        padding: 17px;
     }
 
     .botaoEscondido{
         display: none;
+        border-color: #0A3871;
+        width: 60%;
+        border-radius: 20px;
+        padding: 5px;
+        background-color: ghostwhite;
+        color: #0A3871;
+        
     }
 
     .logo-footer{
