@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 1º Mobile */
+@media only screen and (max-width: 426px) {
+    .logo-header {
+        width: 60.43px;
+        height: 88.03px;
+        padding: 23.97px 0px 0px 16px;
+    }
+
+    .caixa-entrada {
+        width: 500px;
+        padding-top: 100px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .entrada-usuario {
+        border: none;
+        outline: none;
+        width: 80%;
+        height: auto;
+        overflow: hidden;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        color: #0A3871;
+        outline-color: #0A3871;
+    }
+
+    input::placeholder {
+        color: #0A3871;
+    }
+
+    .caixa-aviso {
+        padding-top: 380px;
+    }
+
+    .caixa-aviso img {
+        max-width: 100%;
+    }
+
+    .sessao-aviso {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sessao-botoes {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .criptografar {
+        border-color: #0A3871;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #0A3871;
+        color: ghostwhite;
+    }
+
+    .descriptografar {
+        border-color: #0A3871;
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: ghostwhite;
+        color: #0A3871;
+    }
+
+    .sessao-mensagem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
+}
