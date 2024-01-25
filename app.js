@@ -43,6 +43,7 @@ const processamentoCriptografar = () => {
    if (validarEntrada(inputUsuario)) {
       mostrarResultados("h2", "");
       mostrarResultados("p", criptografar(inputUsuario));
+      ativarBotao();
    } else {
       mostrarResultados("h2", "");
       mostrarResultados(
@@ -57,6 +58,7 @@ const processamentoDescriptografar = () => {
    if (validarEntrada(inputUsuario)) {
       mostrarResultados("h2", "");
       mostrarResultados("p", descriptografar(inputUsuario));
+      ativarBotao();
    } else {
       mostrarResultados("h2", "");
       mostrarResultados(
@@ -68,4 +70,9 @@ const processamentoDescriptografar = () => {
 
 const mostrarResultados = (id, mensagem) => {
    document.getElementById(id).textContent = mensagem;
+};
+
+const ativarBotao = () => {
+   let botaoEscondido = document.getElementById("copia");
+   botaoEscondido.style.display = "block";
 };
