@@ -184,3 +184,130 @@ a {
         padding: 25px;
     }
 }
+
+/* 2º tablet */
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+    .img-desktop {
+        display: none;
+    }
+
+    .logo-header {
+        width: 100.43px;
+        height: 143.03px;
+        padding: 70.97px 0px 0px 41px;
+    }
+
+    .caixa-entrada {
+        padding-top: 100px;
+        padding-left: 51px;
+        padding-right: 16px;
+    }
+
+    .entrada-usuario {
+        border: none;
+        outline: none;
+        width: 80%;
+        height: auto;
+        overflow: hidden;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        color: #0A3871;
+        outline-color: #0A3871;
+    }
+
+    input::placeholder {
+        color: #0A3871;
+    }
+
+    .caixa-aviso {
+        padding-top: 224px;
+        margin-left: 73px;
+    }
+
+    .caixa-aviso img {
+        max-width: 100%;
+    }
+
+    .sessao-botoes {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .criptografar {
+        border-color: #0A3871;
+        width: 40%;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #0A3871;
+        color: ghostwhite;
+    }
+
+    .descriptografar {
+        border-color: #0A3871;
+        width: 40%;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: ghostwhite;
+        color: #0A3871;
+    }
+
+    .sessao-mensagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 573px;
+        height: fit-content;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 94px;
+        padding: 25px;
+        flex-direction: column;
+        padding-top: 30px;
+        border-radius: 25px;
+        box-shadow: -5px 10px 20px 3px rgb(223, 222, 222);
+    }
+
+    .titulo-mensagem {
+        text-align: center;
+        font-weight: 300;
+        color: rgb(67, 62, 62);
+    }
+
+    .paragrafo-mensagem {
+        width: -webkit-fill-available;
+        text-align: center;
+        font-weight: 100;
+        color: rgb(107, 99, 99);
+        padding: 17px;
+    }
+
+    .botaoEscondido {
+        display: none;
+        border-color: #0A3871;
+        width: 60%;
+        border-radius: 20px;
+        padding: 5px;
+        background-color: ghostwhite;
+        color: #0A3871;
+
+    }
+
+    .logo-footer {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+
+}
