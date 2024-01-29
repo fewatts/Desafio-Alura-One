@@ -41,6 +41,7 @@ const validarEntrada = (entrada) => {
 const processamentoCriptografar = () => {
    let inputUsuario = document.getElementById("input").value;
    if (validarEntrada(inputUsuario)) {
+      escondeH2();
       escondeFoto();
       mostrarResultados("h2", "");
       mostrarResultados("p", criptografar(inputUsuario));
@@ -57,6 +58,7 @@ const processamentoCriptografar = () => {
 const processamentoDescriptografar = () => {
    let inputUsuario = document.getElementById("input").value;
    if (validarEntrada(inputUsuario)) {
+      escondeH2();
       escondeFoto();
       mostrarResultados("h2", "");
       mostrarResultados("p", descriptografar(inputUsuario));
@@ -86,6 +88,11 @@ const sleep = (milliseconds) => {
 const escondeFoto = () => {
    let esconderFoto = document.getElementById("img-desktop-1");
    esconderFoto.style.display = "none";
+};
+
+const escondeH2 = () => {
+   let esconderH2 = document.getElementById("h2");
+   esconderH2.style.display = "none";
 };
 
 const copiandoTexto = async () => {
