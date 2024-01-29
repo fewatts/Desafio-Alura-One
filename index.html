@@ -14,20 +14,23 @@
             <img src="./assets/Vector.svg" alt="Logo Alura" class="logo-header">
         </picture>
     </header>
-    <main>
-        <section class="caixa-entrada">
-            <input type="text" placeholder="Digite seu texto" class="entrada-usuario" id="input">
-        </section>
-        <section class="sessao-aviso">
-            <picture class="caixa-aviso">
-                <img src="./assets/Frame 1.svg" alt="aviso">
-            </picture>
-        </section>
-        <section class="sessao-botoes">
-            <button class="criptografar" onclick="processamentoCriptografar()">Criptografar</button>
-            <button class="descriptografar" onclick="processamentoDescriptografar()">Descriptografar</button>
+    <main class="main">
+        <section>
+            <section class="caixa-entrada">
+                <input type="text" placeholder="Digite seu texto" class="entrada-usuario" id="input">
+            </section>
+            <section class="sessao-aviso">
+                <picture class="caixa-aviso">
+                    <img src="./assets/Frame 1.svg" alt="aviso">
+                </picture>
+            </section>
+            <section class="sessao-botoes">
+                <button class="criptografar" onclick="processamentoCriptografar()">Criptografar</button>
+                <button class="descriptografar" onclick="processamentoDescriptografar()">Descriptografar</button>
+            </section>
         </section>
         <section class="sessao-mensagem">
+            <img src="./assets/High quality products 1 1.svg" alt="imagem de análise" class="img-desktop" id="img-desktop-1">
             <h2 class="titulo-mensagem" id="h2">Nenhuma mensagem encontrada</h2>
             <p class="paragrafo-mensagem" id="p">Digite um texto que você deseja criptografar ou descriptografar</p>
             <button id="copia" class="botaoEscondido" onclick="copiandoTexto()">Copiar</button>
