@@ -120,6 +120,12 @@ a {
         padding: 20px;
         background-color: #0A3871;
         color: ghostwhite;
+        border: solid #0A3871;
+    }
+
+    .criptografar:hover {
+        background-color: ghostwhite;
+        color: #0A3871;
     }
 
     .descriptografar {
@@ -129,6 +135,12 @@ a {
         padding: 20px;
         background-color: ghostwhite;
         color: #0A3871;
+        border: solid #0A3871;
+    }
+
+    .descriptografar:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .sessao-mensagem {
@@ -169,7 +181,12 @@ a {
         padding: 5px;
         background-color: ghostwhite;
         color: #0A3871;
+        border: solid #0A3871;
+    }
 
+    .botaoEscondido:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .logo-footer {
@@ -245,6 +262,12 @@ a {
         padding: 20px;
         background-color: #0A3871;
         color: ghostwhite;
+        border: solid #0A3871;
+    }
+
+    .criptografar:hover {
+        background-color: ghostwhite;
+        color: #0A3871;
     }
 
     .descriptografar {
@@ -254,6 +277,12 @@ a {
         padding: 20px;
         background-color: ghostwhite;
         color: #0A3871;
+        border: solid #0A3871;
+    }
+
+    .descriptografar:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .sessao-mensagem {
@@ -293,8 +322,12 @@ a {
         border-radius: 20px;
         padding: 5px;
         background-color: ghostwhite;
-        color: #0A3871;
+        border: solid #0A3871;
+    }
 
+    .botaoEscondido:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .logo-footer {
@@ -375,6 +408,12 @@ a {
         padding: 20px;
         background-color: #0A3871;
         color: ghostwhite;
+        border: solid #0A3871;
+    }
+
+    .criptografar:hover {
+        background-color: ghostwhite;
+        color: #0A3871;
     }
 
     .descriptografar {
@@ -384,6 +423,12 @@ a {
         padding: 20px;
         background-color: ghostwhite;
         color: #0A3871;
+        border: solid #0A3871;
+    }
+
+    .descriptografar:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .sessao-mensagem {
@@ -425,8 +470,12 @@ a {
         border-radius: 20px;
         padding: 5px;
         background-color: ghostwhite;
-        color: #0A3871;
+        border: solid #0A3871;
+    }
 
+    .botaoEscondido:hover {
+        background-color: #0A3871;
+        color: ghostwhite;
     }
 
     .logo-footer {

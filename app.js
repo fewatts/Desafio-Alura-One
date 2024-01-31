@@ -29,56 +29,61 @@ const descriptografar = (criptografada) => {
 };
 
 const validarEntrada = (entrada) => {
-   let apenasMinusculasSemEspacos = /^[a-z\s]+$/;
+   let apenasMinusculasSemAcento = /^[a-z\s]+$/;
 
-   if (!apenasMinusculasSemEspacos.test(entrada)) {
+   if (!apenasMinusculasSemAcento.test(entrada)) {
       return false;
    } else {
       return true;
    }
 };
 
-const processamentoCriptografar = () => {
-   let inputUsuario = document.getElementById("input").value;
-   if (validarEntrada(inputUsuario)) {
-      escondeH2();
+const processamentoCriptografar = async () => {
+   let entradaUsuario = document.getElementById("entrada").value;
+   if (validarEntrada(entradaUsuario)) {
       escondeFoto();
-      mostrarResultados("h2", "");
-      mostrarResultados("p", criptografar(inputUsuario));
-      ativarBotao();
+      mostrarResultados("titulo", "Criptografada:");
+      mostrarResultados("saida", criptografar(entradaUsuario));
+      ativarBotaoDeCopiar();
    } else {
-      mostrarResultados("h2", "");
       mostrarResultados(
-         "p",
+         "titulo",
          "Não pode ter letras maiúsculas ou caracteres especiais..."
       );
    }
+   await sleep(3000);
+   entradaUsuarioVazia();
 };
 
-const processamentoDescriptografar = () => {
-   let inputUsuario = document.getElementById("input").value;
-   if (validarEntrada(inputUsuario)) {
-      escondeH2();
+const processamentoDescriptografar = async () => {
+   let entradaUsuario = document.getElementById("entrada").value;
+   if (validarEntrada(entradaUsuario)) {
       escondeFoto();
-      mostrarResultados("h2", "");
-      mostrarResultados("p", descriptografar(inputUsuario));
-      ativarBotao();
+      mostrarResultados("titulo", "Descriptografada:");
+      mostrarResultados("saida", descriptografar(entradaUsuario));
+      ativarBotaoDeCopiar();
    } else {
-      mostrarResultados("h2", "");
       mostrarResultados(
-         "p",
+         "titulo",
          "Não pode ter letras maiúsculas ou caracteres especiais..."
       );
    }
+   await sleep(3000);
+   entradaUsuarioVazia();
 };
 
 const mostrarResultados = (id, mensagem) => {
    document.getElementById(id).textContent = mensagem;
 };
 
-const ativarBotao = () => {
+const ativarBotaoDeCopiar = () => {
    let botaoEscondido = document.getElementById("copia");
    botaoEscondido.style.display = "block";
+};
+
+const desativarBotaoDeCopiar = () => {
+   let botaoEscondido = document.getElementById("copia");
+   botaoEscondido.style.display = "none";
 };
 
 const sleep = (milliseconds) => {
@@ -90,13 +95,13 @@ const escondeFoto = () => {
    esconderFoto.style.display = "none";
 };
 
-const escondeH2 = () => {
-   let esconderH2 = document.getElementById("h2");
-   esconderH2.style.display = "none";
+const mostraFoto = () => {
+   let mostraFoto = document.getElementById("img-desktop-1");
+   mostraFoto.style.display = "block";
 };
 
 const copiandoTexto = async () => {
-   let texto = document.getElementById("p").textContent;
+   let texto = document.getElementById("saida").textContent;
    try {
       await navigator.clipboard.writeText(texto);
    } catch (err) {
@@ -105,4 +110,19 @@ const copiandoTexto = async () => {
    mostrarResultados("copia", "Copiado!");
    await sleep(3000);
    mostrarResultados("copia", "Copiar");
+   entradaUsuarioVazia();
+};
+
+const entradaUsuarioVazia = () => {
+   let entrada = document.getElementById("entrada").value;
+   console.log(entrada.trim().length === 0);
+   if (entrada.trim().length === 0) {
+      mostrarResultados("titulo", "Nenhuma mensagem encontrada");
+      mostrarResultados(
+         "saida",
+         "Digite um texto que você deseja criptografar ou descriptografar"
+      );
+      mostraFoto();
+      desativarBotaoDeCopiar();
+   }
 };
