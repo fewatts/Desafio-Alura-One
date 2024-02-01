@@ -79,7 +79,7 @@ a {
         width: 80%;
         height: auto;
         overflow: hidden;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         line-height: 48px;
         color: #0A3871;
@@ -226,7 +226,7 @@ a {
         width: 80%;
         height: auto;
         overflow: hidden;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         line-height: 48px;
         color: #0A3871;
@@ -345,7 +345,7 @@ a {
 }
 
 /* Desktop */
-@media only screen and (min-width: 769px) and (max-width: 1700px) {
+@media only screen and (min-width: 800px) and (max-width: 1700px) {
     .main {
         margin-left: 50px;
         display: flex;
@@ -373,7 +373,7 @@ a {
         width: 80%;
         height: auto;
         overflow: hidden;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         line-height: 48px;
         color: #0A3871;
